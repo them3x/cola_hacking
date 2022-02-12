@@ -1,0 +1,36 @@
+Pacote: aircrack-ng
+
+Derrubar/Subir placa de operação
+
+ifconfig <INTERFACE> dowm/up
+
+_____________________________________________
+
+Indentifica canais suportados pela placa
+
+iwlist wlan0 channel
+
+_____________________________________________
+
+Identificar APs proximos
+
+iwlist <INTERFACE> scanning
+
+_____________________________________________
+
+Informações de placa especifica
+
+iwconfig <INTERFACE>
+
+_____________________________________________
+
+Altera o modo de operação da placa
+
+iwconfig <INTERFACE> mode <MODO>
+
+Modos disponiveis iwconfig:
+
+Ad-Hoc - Managed - Master - Repeater
+Secondary - Monitor - Auto
+
+_____________________________________________

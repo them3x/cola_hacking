@@ -1,0 +1,12 @@
+Pacote: ssh
+
+Obtendo hosts ativos com portas padrões SSH
+
+nmap -sS -Pn -p 22,2222 -sV <HOST>
+________________________________________
+
+
+Verificar metodos de autenticação aceitos pelo servidor
+
+ssh -v <HOST> | grep "Authentications that can continue"
+

@@ -1,0 +1,26 @@
+pacote: nbtscan
+
+
+Decobrir hosts com smb de uma rede
+
+nbtscan -r 10.0.0.1/24
+
+__________________________________
+
+Listar compartilhamentos
+
+smbclient -L \\IP [-N para tentar Anonymous login] - [OPCIONAL -U <USUARIO>]
+
+__________________________________
+
+Conectar-se com compartilhamento
+
+smbclient -L //IP/<PASTA> [-N para tentar Anonymous login] - [OPCIONAL -U <USUARIO>]
+
+
+
+ULTILIZADO VERSÕES ANTIGAS DO PROTOCOLO
+
+Adicionar parametro ( --option='client min protocol=NT1' )
+
+

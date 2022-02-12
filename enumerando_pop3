@@ -1,0 +1,25 @@
+Pacote: nmap,netcat(nc),telnet
+
+
+Listando hosts de uma rede com porta 110 aberta
+
+nmap --open -sS -p 110 <IP>
+________________________________________
+
+
+Conectando com nc/telnet
+
+nc -vn <HOST> 110
+telnet <HOST> 110
+______________________________________
+
+
+Comandos basicos
+
+USER <usuario> - define usuario para login
+PASS <senha> - define senha para login
+
+
+STAT - ver status
+LIST - ver mensagens disponiveis
+RETR <NUMERO DA MSG> - visualiza mensagem

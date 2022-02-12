@@ -1,0 +1,11 @@
+Pacote: aircrack-ng
+
+Habilitar modo monitor
+
+airmon-ng start <INTERFACE>
+__________________________________
+
+Monitorar redes/clientes
+
+airodump-ng <INTERFACE>
+

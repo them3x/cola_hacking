@@ -1,0 +1,18 @@
+Pacote: smbclient
+
+
+
+Conectar a hosts <anonimo>
+
+rpcclient -U <USUARIO - Deixar em "" para anonymous login> [-N anonymous login (no pass)] <HOST>
+
+_________________________________
+
+Comandos basicos RPC
+
+querydominfo > informações do sistema
+enumdomusers > lista usuarios do host
+queryuser <USUARIO> > lista informações de um determinado usuario
+netshareenum > informações de compartilhamento
+netshareenumall > informações de todos os compartilhamento (com mais detalher)
+? > help (todas os comandos)

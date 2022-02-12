@@ -1,0 +1,37 @@
+Pacote: nmap,netcat(nc),telnet
+
+
+Listando hosts de uma rede com porta 25 aberta
+
+nmap --open -sS -p 25 <IP>
+________________________________________
+
+
+Conectando com nc/telnet
+
+nc -vn <HOST> 25
+telnet <HOST> 25
+______________________________________
+
+Comandos basicos
+
+HELLO <QUALQUER COISA kkk>
+EHLO <QUALQUER COISA> - Infomações de comandos (condição que normalmente permite enumeração de usuario)
+HELP - Todos os comando permitidos (nem sempre funciona)
+
+
+VRFY <usuario> - Valida usuario
+
+___________________________________________-
+
+Enviar emails
+
+mail from: <USUARIO> - Seta usuario
+rcpt to: <USUARIO> - Seta usuario destinatario (condição que normalmente permite enumeração de usuario)
+
+
+DATA - Inicia modo para insersão texto do email
+ENTER + . + ENTER - <Para finalizar modo insersão de texto>
+
+
+

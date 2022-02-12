@@ -1,0 +1,13 @@
+Pacote: telnet
+
+
+
+
+Enumerando hosts de uma rede e identificando telnet
+
+nmap -Pn -p 23 -sS <IP>
+_________________________________________
+
+Conectando-se ao telnet
+
+telnet IP

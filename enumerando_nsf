@@ -1,0 +1,23 @@
+Identificando hosts com serviço Network File Sistem aberto
+
+nmap -sS -p 2049 -Pn <HOST>
+
+________________________________________
+
+Verificando versões de protocolo que o HOST suporta
+
+rpcinfo -e <HOST> | grep nsf
+
+
+________________________________________
+
+Vericar quais pastas foram compartilhadas pelo host
+
+showmont -e <HOST>
+
+
+_________________________________________
+
+Montando pasta compartilhada em ambiente local
+
+mount -t nsf -o nsfvers=<VERSAO> <HOST>:<PASTA DO HOST COMPARTILHADA> <PASTA LOCAL PARA MONTAGEM>

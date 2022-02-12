@@ -1,0 +1,77 @@
+Pacote: snmp, onesixtyone, nagios-plugins
+
+
+Site para verificar o que um determinado OID faz
+
+http://www.oid-info.com/
+
+Site para verificar tipos de OID
+
+https://oidref.com/1.3.6.1.2.1
+
+____________________________________________________
+
+
+Enumerando hosts com porta 161 (UDP) abertas
+
+nmap -sVU -p 161 -Pn <HOST>
+
+____________________________________________________
+
+Enumerando communtys de uma rede
+
+onesixtyone -c <WORDLIST DE COMMUNITY SNMP> <REDE>
+
+_____________________________________________________
+
+Consultando SNMP
+
+snmpwalk -c <COMMUNITY> -v1 <HOSTS> <OID> (OID EX: 1.3.6.1.4.1.77.1.2.25 = USERTABLES)
+OBS: Usando o ultilitario snmpwalk, caso o OID não seja espeficiado, o programa tentara obter todas as informações que conseguir, porém a tabela das informações não serão traduzidas
+
+-------
+
+Solução NON-FREE para tradução automatica das tabelas:
+
+É possivel obter toda a saida do comando a cima de forma traduzida usando um pacote não livre.
+
+------
+
+Repositorio necessario (Debian): deb http://security.debian.org/debian-security buster/updates main contrib non-free
+Pacote não livre para tradução dos OID: snmp-mibs-downloader
+
+-----
+
+Limpando regras de configuração snmp
+
+echo "" > /etc/snmp/snmp.conf
+
+----
+
+Consultando SNMP com tabelas traduzidas
+
+snmpwalk -c <COMMUNITY> -v1 <HOSTS>
+
+(Não recomendo solução NON-FREE, keep using free software)
+
+_____________________________________________________________________
+
+
+CASO TENHA PERMISSÃO DE ESCRITA
+
+
+Criando um alias para programa check_snmp
+
+alias snmp-check=/usr/lib/nagios/plugins/check_snmp
+_________________________________________________
+
+
+Enumeração automatica de SNMP
+
+snmp-check <HOST> -c <COMMUNITY>
+
+_________________________________________________
+
+Alterar informações via SNMP
+
+snmpset -c <COMMUNITY> -v1 <HOST> <OID> <TIPO s(STRING) i(INTEIRO) (--help para ver tipos)> <VALOR A SER SETADO>
